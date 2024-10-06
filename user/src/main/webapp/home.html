@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Registration Form</title>
+<link rel="stylesheet" href="css/bootstrap.css">
+<style>
+#frm {
+ background-color:#e0ffff;
+ border-radius:15px;
+  width: 500px;
+  margin:50px 70px ;
+ 
+}
+body{
+  background-image:url("images/user.jpg");
+  background-size:cover;
+  background-position:center;
+}
+#head{
+  border-radius:10px;
+  background-color:#fa8072 ;
+  text-align:center;
+  font-family:"Fantasy";
+
+}  
+#mar {
+          
+            font-family:'Impact','fantasy',sans-serif;
+            color:#f2003c;
+        }
+     
+</style>
+</head>
+<body class="container-fluid" >
+<marquee id='mar'><h2 class='text-#f2003c'>"Streamline User Access, Empower Your System"</h2></marquee>
+<form action="Register" method="post" class='form-card card-header' id="frm">
+ <h2 class="bg-danger card-header text-white" id='head'>Registration Form</h2>
+ <table class="table table-hover">
+   <tr>
+      <td><label for="userName">Name</label></td>
+      <td><input type="text" id="userName" name="userName" placeholder="Name" required></td>   
+   </tr>
+   <tr>
+      <td><label for="email">Email</label></td>
+      <td><input type="email" id="email" name="email" placeholder="user@gmail.com" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+      ></td>   
+   </tr>
+   <tr>
+      <td><label for="mobile">Mobile</label></td>
+      <td><input type="text" id="mobile" name="mobile" placeholder="mobile no." required pattern="\d{10}"></td>   
+   </tr>
+   <tr>
+      <td><label for="dob">DOB</label></td>
+      <td><input type="date" id="dob" name="dob" required></td>   
+   </tr>
+   <tr>
+      <td>Gender</td>   
+      <td>
+      <input type="radio" name="gender" value="male"> Male &nbsp;
+      <input type="radio" name="gender" value="female"> Female
+      </td>
+    </tr>
+   <tr>
+   <td><label for="city">City</label></td>
+   <td>
+       <select name="city" id="city">
+         <option value="" disabled selected>Select City</option>
+         <option value="Pune">Pune</option>
+         <option value="Mumbai">Mumbai</option>
+         <option value="Delhi">Delhi</option>
+         <option value="Banglore">Banglore</option>       
+       </select>   
+   </td>
+   </tr>
+   <tr class="card-footer">
+     <td><button type="submit" class="btn btn-success">Register</button></td>
+     <td><button type="reset" class="btn btn-danger">Cancel</button></td> 
+   </tr>
+ </table>
+ <a href="showdata" class="btn btn-outline-success btn-block">Show Data</a>
+</form>
+</body>
+</html>
